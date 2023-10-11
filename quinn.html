@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {box-sizing: border-box;}
+    body { margin:0;}
+
+    section {
+      width:100vw;
+      height:100vh;
+      display:flex;
+    }
+    section > article {
+      flex:1;
+    }
+    .one {
+      background-color: rgb(213, 240, 231);
+    }
+    .two {
+      background-color: rgb(30, 183, 225);
+    }
+    
+    .one .right-content {
+      display:flex;
+      align-items:end;
+      justify-content:flex-end;
+    }
+    .one .left-content {
+      position:relative;
+    }
+    .one .left-overlay {
+      bottom:0;
+      left:0;
+      position:absolute;
+    }
+
+    /* Second setion */
+    .two .left-content {
+      display:flex;
+      align-items:end;
+      justify-content:flex-start;
+    }
+    .two .right-content {
+      position:relative;
+    }
+    .two .right-overlay {
+      bottom:0;
+      right:0;
+      position:absolute;
+    }
+    
+    .ticket {
+    margin: 40px;
+      min-height:400px;
+    background-color: bisque;
+    position: relative;
+    }
+
+.ticket .corner {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+}
+.one .ticket .corner {
+  background-color: rgb(213, 240, 231);
+}
+.two .ticket .corner {
+  background-color: rgb(30, 183, 225);
+}
+.ticket .content {
+  padding:20px;
+}
+.top { top: -10px; }
+.bottom { bottom: -10px; }
+.left { left: -10px; }
+.right { right: -10px; }
+
+  </style>
+</head>
+<body>
+  
+  <section class="one">
+    <article class="left-content">
+      <div class="ticket">
+        <div class="content">
+          <h2>I'm a subtitle</h2>
+          <p>I'm some content</p>
+        </div>
+        
+        <div class="corner top left"></div>
+        <div class="corner top right"></div>
+        <div class="corner bottom left"></div>
+        <div class="corner bottom right"></div>
+    </div>
+    <div class="left-overlay"><img src="http://placekitten.com/200/200"></div>
+  </article>
+    <article class="right-content">
+      <img src="http://placekitten.com/300/400">
+    </article>
+  </section>
+  <section class="two">
+    
+    <article class="left-content">
+      <img src="http://placekitten.com/300/400">
+    </article>
+    <article class="right-content">
+      <div class="ticket">
+        <div class="content">
+          <h2>I'm a subtitle</h2>
+          <p>I'm some content</p>
+        </div>
+        
+        <div class="corner top left"></div>
+        <div class="corner top right"></div>
+        <div class="corner bottom left"></div>
+        <div class="corner bottom right"></div>
+      </div>
+      <div class="right-overlay"><img src="http://placekitten.com/200/200"></div>
+    </article>
+  </section>
+</body>
+</html>
