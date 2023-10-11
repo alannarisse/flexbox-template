@@ -21,8 +21,9 @@ a:hover {
 }
 
 main {
+  /* margin-top:72px;  use only with position fixed */
   width: 100vw;
-  
+  /* height:100vh; */
 }
 
 body.subpage01 header {
@@ -35,6 +36,10 @@ header {
   width:100vw;
   align-items:baseline;
   padding: 10px 20px 0 20px;
+  /* position:fixed; turn all these on for position fixed.
+  top:0;
+  left:0;
+  right:0; */
 }
 .logo {
   flex:25%;
@@ -69,11 +74,6 @@ nav li a:hover {
   color:rgb(116, 81, 116);
 }
 
-.tall-image {
-  height:300px;
-  width:auto;
-}
-
 
 .border {
   border: 1px solid black;
@@ -81,7 +81,7 @@ nav li a:hover {
 
 .flexbox {
   display:flex;
-  width:90%;
+  width:80%;
   margin:auto;
   margin-top:60px;
 }
@@ -99,8 +99,8 @@ body.subpage01 footer a {
 footer {
   background-color:#333;
   padding:30px 60px;
-  /* position:fixed;
+  position:fixed;
   bottom:0;
   left:0;
-  right:0; */
+  right:0;
 }
